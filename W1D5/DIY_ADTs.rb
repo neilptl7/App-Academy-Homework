@@ -43,3 +43,29 @@ class Queue
   end
 
 end
+
+#Exercise 3
+
+class Map
+
+  def initialize
+    @map = []
+  end
+
+  def assign(key, val)
+
+  end
+
+  def lookup(key)
+
+  end
+
+  def remove(key)
+
+  end
+
+  def show
+    
+  end
+
+end
