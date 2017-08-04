@@ -1,19 +1,22 @@
+#Exercise 1
+
 class Stack
 
-  def intialize
+  def initialize
     @stack = []
   end
 
   def add(el)
-    self << el
+    @stack << el
+    el
   end
 
   def remove
-    self.pop
+    @stack.pop
   end
 
   def show
-    self.dup
+    @stack.dup
   end
 
 end
