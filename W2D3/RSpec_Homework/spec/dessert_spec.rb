@@ -42,13 +42,19 @@ describe Dessert do
   end
 
   describe "#eat" do
-    it "subtracts an amount from the quantity"
+    it "subtracts an amount from the quantity" do
+      expect(brownie.quantity).not_to eq(brownie.quantity)
+    end
 
-    it "raises an error if the amount is greater than the quantity"
+    it "raises an error if the amount is greater than the quantity" do
+      expect { Dessert.new('brownie', 50)}.to raise_error("Not enough for everyone!")
+    end
   end
 
   describe "#serve" do
-    it "contains the titleized version of the chef's name"
+    it "contains the titleized version of the chef's name" do
+      allow(:chef).to recieve(:titleize).and_return("MasterChef Gordon Ramsay")
+    end
   end
 
   describe "#make_more" do
