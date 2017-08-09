@@ -53,13 +53,13 @@ describe Dessert do
 
   describe "#serve" do
     it "contains the titleized version of the chef's name" do
-      allow(:chef).to recieve(:titleize).and_return("MasterChef Gordon Ramsay")
+      allow(:chef).to receive(:titleize).and_return("MasterChef Gordon Ramsay")
     end
   end
 
   describe "#make_more" do
     it "calls bake on the dessert's chef with the dessert passed in" do
-      expect(:chef).to recieve(:bake).with(brownie)
+      expect(:chef).to receive(:bake).with(brownie)
     end
   end
 end
