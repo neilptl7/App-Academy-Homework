@@ -20,11 +20,13 @@ describe Dessert do
     end
     it "raises an argument error when given a non-integer quantity" do
       expect { Dessert.new('brownie', 50)}.to raise_error("Amount must be integer")
-    end 
+    end
   end
 
   describe "#add_ingredient" do
-    it "adds an ingredient to the ingredients array"
+    it "adds an ingredient to the ingredients array" do
+      expect brownie.add_ingredient('chocolate')
+    end
   end
 
   describe "#mix!" do
